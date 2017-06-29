@@ -1,1 +1,1 @@
-== This is the repository for first alpha blog
+== This is the repository for first alpha-blog
