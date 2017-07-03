@@ -1,12 +1,4 @@
-<% if @article.errors.any? %>
-<h2>การสมัครไม่สำเร็จเนื่องจาก</h2>
-    <% @article.errors.full_messages.each do |msg| %>
-    <ul>
-        <li><%=msg%></li>
-    </ul>
-    <% end %>
-<% end %>
-
+<%= render 'shared/errors',obj: @article %>
 <div class="row">
     <div class="col-sm-12">
          <%= form_for(@article, :html => { class: "form-horizontal", role: "form" }) do |f| %>
