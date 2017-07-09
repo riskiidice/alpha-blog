@@ -8,7 +8,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
        
        if @user.save
-            flash[:success] = "Welcome to Alpha Blog #{@user.username}"
+            flash[:success] = "Welcome to Alpha Blog #{@user.username} your id is #{@user.id}"
             redirect_to articles_path
         else
             render 'new'
@@ -26,6 +26,10 @@ class UsersController < ApplicationController
         else
             render 'edit'
         end
+    end
+    
+    def show
+        
     end
     
     private

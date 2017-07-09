@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :articles
   
   get 'signup', to: 'users#new'
-  resources :users, except: [:new, :show, :destroy]
+  resources :users, except: [:new, :destroy]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
